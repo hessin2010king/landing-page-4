@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const Stats = () => {
@@ -10,13 +9,15 @@ const Stats = () => {
   ];
   
   return (
-    <section className="py-12 bg-blue-900 bg-opacity-90">
+    <section className="relative py-10 bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: 'linear-gradient(#1E2A38CC, #1E2A38CC), url("/images/stats.png")'
+    }}>
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {stats.map((stat, index) => (
-            <div key={index} className="p-4">
-              <p className="text-4xl md:text-5xl font-bold text-white">{stat.value}</p>
-              <p className="text-xs md:text-sm text-blue-100 uppercase tracking-wider mt-2">{stat.label}</p>
+            <div key={index} className="p-6 transform hover:scale-105 transition-transform duration-300">
+              <p className="text-4xl md:text-6xl font-Gilrory font-light text-white mb-3">{stat.value}</p>
+              <p className="text-sm md:text-xl font-Gilroy-Light text-blue-100 uppercase tracking-wider">{stat.label}</p>
             </div>
           ))}
         </div>

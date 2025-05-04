@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
@@ -30,11 +29,11 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-16 bg-white">
+    <section id="contact" className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-blue-800 mb-2">Get In Touch</h2>
-          <h3 className="text-2xl font-medium text-gray-700 mb-4">How Can We Help?</h3>
+          <h3 className="text-5xl font-Gilroy-Light text-gray-700 mb-4">How Can We Help?</h3>
           <p className="text-gray-600 max-w-2xl mx-auto">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin augue sed vehicular auctor dictum
             tincidunt et ullamcorper eget risus. Suspendisse in sem sit amet lectus pede.
@@ -42,8 +41,8 @@ const ContactForm = () => {
         </div>
         
         <div className="flex flex-col md:flex-row gap-8 items-center">
-          <div className="w-full md:w-1/2">
-            <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="w-full md:w-2/3 ">
+            <form onSubmit={handleSubmit} className="space-y-5 ">
               <div>
                 <Input
                   type="text"
@@ -52,7 +51,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full"
+                  className="w-full bg-[#54667B21]"
                 />
               </div>
               <div>
@@ -63,7 +62,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full"
+                  className="w-full bg-[#54667B21]"
                 />
               </div>
               <div>
@@ -74,7 +73,7 @@ const ContactForm = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full"
+                  className="w-full bg-[#54667B21]"
                 />
               </div>
               <div>
@@ -84,13 +83,13 @@ const ContactForm = () => {
                   value={formData.message}
                   onChange={handleChange}
                   required
-                  className="w-full min-h-[120px]"
+                  className="w-full min-h-[120px] bg-[#54667B21]"
                 />
               </div>
               <div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-blue-700 hover:bg-blue-800"
+                  className="w-full bg-[#454591] hover:bg-[#454591] justify-center"
                 >
                   Send Mail
                 </Button>
@@ -98,11 +97,12 @@ const ContactForm = () => {
             </form>
           </div>
           
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 flex ">
             <img 
-              src="/placeholder.svg"
+              src="/images/contact.png"
               alt="Contact illustration"
-              className="max-w-full h-auto"
+              className="w-full h-auto"
+              style={{ width: '400px', height: '300px' }}
             />
           </div>
         </div>
